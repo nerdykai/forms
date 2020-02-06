@@ -6,17 +6,80 @@
   </head>
 
   <body>
+
+<!-- comment is command + forward slash -->
+
     <form action="https://www.google.com" method="post">
+<!-- form tells it that it's a form, not just text. action tells it where to send the infformation submitted and method tells it to post it to the url in the action section. -->
+
       <input type="text" name="username">
       <input type="date" name="birthday">
       <input type="time" name="game-time">
-      <input type="email" name="email-address">
+      <input type="email" name="email-address" required>
+<!-- the "required" bit makes this one required to be answered before you submit the information. -->
       <input type="url" name="website">
       <input type="number" name="cost">
       <input type="tel" name="phone-number">
+<!-- input fields let you have a place to type in the info to submit. various types for various types of info. -->
+
       <textarea name="comment">
-        add your comment here
+        Add your comment here.
       </textarea>
+<!-- textarea is a text box where you can type in, in this case, a comment. -->
+
+      <input type="radio" name="day" value="Friday" checked>Friday
+      <input type="radio" name="day" value="Saturday">Saturday
+      <input type="radio" name="day" value="Sunday">Sunday
+<!-- radio types let you have basically a multiple choice section where you choose one option as your answer. -->
+
+      <input type="checkbox" name="day" value="Friday" checked>Friday
+      <input type="checkbox" name="day" value="Saturday">Saturday
+      <input type="checkbox" name="day" value="Sunday">Sunday
+<!-- checkbox is like radio but you can choose more than one option as your answer. -->
+
+      <select name="day" multiple>
+        <option value="Friday">Friday</option>
+        <option value="Saturday" checked>Saturday</option>
+        <option value="Sunday">Sunday</option>
+      </select>
+<!-- select puts a dropdown menu where you can scroll through a list to select one instead of having individual buttons for each option like with radio or checkboxes. the "multiple" in the first line means you can select multiple in the list instead of just one. -->
+
+      <input type="submit" name="submit" value="Send">
+<!-- creates a button to submit the info. value is what the button will say in this case. cannot edit the appearence of the text on this. -->
+
+      <button type="submit" name="submit">
+        <strong>Send us</strong> a message!
+      </button>
+<!-- same as above but you can choose how the text will look. -->
+
+      <label for="username">Username</label>
+<!-- adds a label that tells the viewer what the text box next is designated for. -->
+
+      <input type="text" name="user-name" id="username">
+<!-- adds a text box designated for usernames -->
+
+      <br>
+      <br>
+      <br>
+<!-- page breaks -->
+
+      <fieldset>
+<!-- creates a box that seperates the information inside from the previous/next. -->
+
+        <legend>Login</legend>
+<!-- puts a label on the fieldset box. -->
+
+        <label>username
+          <input type="text" name="username" placeholder="enter your full astate email address">
+        </label>
+<!-- adds a text box with the label "username" to the left of it and has placeholder text inside it telling you what to type in the box. -->
+
+        <label>password
+          <input type="text" name="password" disabled>
+        </label>
+      </fieldset>
+<!-- same as the username input above but is disabled until you answer the username one. -->
+
     </form>
 
   </body>
